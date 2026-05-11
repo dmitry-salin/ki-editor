@@ -64,6 +64,7 @@ pub fn languages() -> HashMap<String, Language> {
         ("odin", odin()),
         ("dune", dune()),
         ("python", python()),
+        ("mojo", mojo()),
         ("perl", perl()),
         ("rescript", rescript()),
         ("roc", roc()),
@@ -959,6 +960,24 @@ fn python() -> Language {
         tree_sitter_grammar_config: Some(GrammarConfig {
             id: "python".to_string(),
             kind: GrammarConfigKind::CargoLinked(CargoLinkedTreesitterLanguage::Python),
+        }),
+        line_comment_prefix: Some("#".to_string()),
+        ..Language::new()
+    }
+}
+
+fn mojo() -> Language {
+    Language {
+        extensions: to_vec(&["mojo"]),
+        formatter: Some(Command::new("pixi", &["run", "mojo", "format", "-q", "-"])),
+        lsp_command: Some(LspCommand {
+            command: Command::new("pixi", &["run", "mojo-lsp-server"]),
+            ..LspCommand::default()
+        }),
+        lsp_language_id: Some(LanguageId::new("mojo")),
+        tree_sitter_grammar_config: Some(GrammarConfig {
+            id: "mojo".to_string(),
+            kind: GrammarConfigKind::CargoLinked(CargoLinkedTreesitterLanguage::Mojo),
         }),
         line_comment_prefix: Some("#".to_string()),
         ..Language::new()

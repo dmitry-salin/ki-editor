@@ -35,6 +35,8 @@ tree-sitter-html = "0.23.2"
 tree-sitter-lua = "0.2.0"
 tree-sitter-md = "0.3.2"
 tree-sitter-python = "0.23.6"
+# tree-sitter-mojo = { git = "https://github.com/dmitry-salin/tree-sitter-mojo", rev = "9362515" }
+tree-sitter-mojo = { path = "/home/dmitry/git/tree-sitter-mojo" }
 tree-sitter-quickfix.workspace = true
 tree-sitter-ruby = "0.23.1"
 tree-sitter-rust = "0.24.0"

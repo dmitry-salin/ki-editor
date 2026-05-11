@@ -44,6 +44,7 @@ const INCLUDED_NVIM_TREESITTER_LANGUAGES: &[&str] = &[
     "ki_quickfix",
     "lua",
     "markdown",
+    "mojo",
     "nix",
     "ocaml",
     "ocaml_interface",

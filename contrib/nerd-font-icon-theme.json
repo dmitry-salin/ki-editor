@@ -49,6 +49,8 @@
         "jl": "\ue624",
         "egg": "\uf15b",
         "whl": "\uf15b",
+        "mojo": "\udb80\ude38",
+        "conda": "\ue715",
         "java": "\ue738",
         "class": "\ue738",
         "jar": "\ue738",
@@ -122,6 +124,8 @@
         "pyproject.toml": "\ue73c",
         "requirements.txt": "\uf0ea",
         "requirements": "\uf0ea",
+        "pixi.toml": "\udb80\udfd7",
+        "pixi.lock": "\udb80\udfd7",
         "FUNDING.yml": "\uf81e",
         "dependabot.yml": "\uf4d3"
     },
